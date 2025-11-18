@@ -17,11 +17,15 @@ while menuActivo:
     opcion = input("Ingrese una opcion:")
 
     if opcion == "1":
-        base = float(input("Ingrese el primer numero: "))
-        altura = float(input("Ingrese el segundo numero: "))
+        base = float(input("Ingrese la base del triangulo: "))
+        altura = float(input("Ingrese la altura del triangulo: "))
         tr=Triangulo(base,altura)
         area = tr.area()
         print("El area es:", area)
-
-
-
+    elif opcion == "2":
+        radio = float(input("Indique el radio del circulo:"))
+        cr = Circulo(radio)
+        area = cr.area()
+        print("El area es:", area)
+   
+        
