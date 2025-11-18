@@ -1,6 +1,6 @@
 from FiguraGeometrica import FiguraGeometrica
 class Triangulo(FiguraGeometrica):
-    def __init__(self, base, alura):
+    def __init__(self, base, altura):
         self.base=base
         self.altura=altura
 
