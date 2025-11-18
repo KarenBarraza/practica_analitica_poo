@@ -27,5 +27,10 @@ while menuActivo:
         cr = Circulo(radio)
         area = cr.area()
         print("El area es:", area)
-   
-        
+    elif opcion == "3":
+        base = float(input("Ingrese la base del rectangulo: "))
+        altura = float(input("Ingrese la altura del rectangulo: "))
+        rt=Rectangulo(base, altura)
+        area= rt.area()
+        print("El area es:", area)   
+             
