@@ -6,6 +6,8 @@ from Rectangulo import Rectangulo
 from Cuadrado import Cuadrado
 from Cilindro import Cilindro
 from Paralelogramo import Paralelogramo
+from Rombo import Rombo
+from Trapecio import Trapecio
 
 fg=FiguraGeometrica
 
@@ -20,7 +22,9 @@ while menuActivo:
     print("4. Cuadrado")
     print("5. Cilindro")
     print("6. Paralelograma")
-    print("7. Salir")
+    print("7. Rombo")
+    print("8. Trapecio")
+    print("9. Salir")
     #Se solicita que ingrese la opcion que va a elegir
     opcion = input("Ingrese una opcion: ")
 
@@ -69,6 +73,21 @@ while menuActivo:
         area=pr.area()  
         print("El area del paralelogramo es: ", area) 
     elif opcion == "7":
+        nombre=input("Confirme el nombre: ")
+        rb=Rombo(nombre)
+        rb.diagonal1 = float(input("Ingrese la diagonal #1 : "))
+        rb.diagonal2 = float(input("Ingrese la diagonal #2 : "))
+        area=rb.area()  
+        print("El area del Rombo es: ", area) 
+    elif opcion == "8":
+        nombre=input("Confirme el nombre: ")
+        tr=Trapecio(nombre)
+        tr.basesup = float(input("Ingrese la base #1 del trapecio : "))
+        tr.baseinf = float(input("Ingrese la base #2 del trapecio : "))
+        tr.altura = float(input("Ingrese la altura del trapecio: "))
+        area=tr.area()  
+        print("El area del trapecio es: ", area) 
+    elif opcion == "9":
         #Con esta opcion se sale del programa
         print("Saliendo del programa")
         break
