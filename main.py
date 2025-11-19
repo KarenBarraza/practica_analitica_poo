@@ -4,6 +4,8 @@ from Triangulo import Triangulo
 from Circulo import Circulo
 from Rectangulo import Rectangulo
 from Cuadrado import Cuadrado
+from Cilindro import Cilindro
+from Paralelogramo import Paralelogramo
 
 fg=FiguraGeometrica
 
@@ -16,7 +18,9 @@ while menuActivo:
     print("2. Circulo")
     print("3. Rectangulo")
     print("4. Cuadrado")
-    print("5. Salir")
+    print("5. Cilindro")
+    print("6. Paralelograma")
+    print("7. Salir")
     #Se solicita que ingrese la opcion que va a elegir
     opcion = input("Ingrese una opcion: ")
 
@@ -50,7 +54,21 @@ while menuActivo:
         cd=Cuadrado(lado)
         area=cd.area()
         print("El area del cuadrado es:", area)
-    elif opcion =="5":
+    elif opcion == "5":
+        nombre=input("Confirme el nombre: ")
+        cil=Cilindro(nombre)
+        cil.radio = float(input("Ingrese el radio del cilindro: "))
+        cil.altura = float(input("Ingrese la altura del cilindro: "))
+        area=cil.area()  
+        print("El area del cilindro es: ", area) 
+    elif opcion == "6":
+        nombre=input("Confirme el nombre: ")
+        pr=Paralelogramo(nombre)
+        pr.base = float(input("Ingrese la base del paralelogramo: "))
+        pr.altura = float(input("Ingrese la altura del paralelogramo: "))
+        area=pr.area()  
+        print("El area del paralelogramo es: ", area) 
+    elif opcion == "7":
         #Con esta opcion se sale del programa
         print("Saliendo del programa")
         break
